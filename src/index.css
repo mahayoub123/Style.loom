@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+@tailwind utilities;
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@import "tailwindcss";
+
+
+
+@theme {
+    --font-roboto: "Roboto", sans-serif;
+    --font-mono: "Roboto Mono", monospace;
+    --color-brown-60: #AE9B84;
+    --color-dark-10: #1A1A1A;
+    --color-brown-70: #C2B4A3;
+    --color-dark-06:#0F0F0F;
+    --color-dark-10:#1A1A1A;
+    --color-dark-12: #1F1F1F;
+    --color-dark-15:#262626;
+    --color-dark-20:#333333;
+    --color-brown-70:#C2B4A3;
+    --color-brown-80:#D6CDC2;
+
+    
+    
+    
+}
+.custom-scrollbar::-webkit-scrollbar {
+    width: 1px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #000;
+    width: 1px;
+}
+
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #000;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+@layer utilities{
+    @keyframes tickerScroll {
+        0%{
+            transform: translateX(0%);
+        }
+        100%{
+            transform: translateX(-50%);
+        }
+    }
+    .animate-ticker{
+        animation: tickerScroll 10s linear infinite;
+    }
+}
+
+
